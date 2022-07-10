@@ -4,12 +4,16 @@ import React from 'react';
 // import Routes from "./routes";
 
 import Home from "./components/Home/Home"
+import Produtos from "./components/Produtos/Produtos"
 // import Login from "./components/Login/Login"
 
 
 const App = () => {
    return (
-    <Home />
+    <>
+      <Home />
+      <Produtos />
+    </>
     // <Router>
     //   <div className="App" >
     //     <Routes>

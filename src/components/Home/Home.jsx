@@ -1,65 +1,64 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
+// import Card from '@mui/material/Card';
+// import CardActions from '@mui/material/CardActions';
+// import CardContent from '@mui/material/CardContent';
+// import CardHeader from '@mui/material/CardHeader';
 import CssBaseline from '@mui/material/CssBaseline';
-import Grid from '@mui/material/Grid';
-import StarIcon from '@mui/icons-material/StarBorder';
+// import Grid from '@mui/material/Grid';
+// import StarIcon from '@mui/icons-material/StarBorder';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
 // import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import CardMedia from '@mui/material/CardMedia';
+// import CardMedia from '@mui/material/CardMedia';
 
 import "../../components/Login/Login";
 import { Divider } from '@mui/material';
-// comunicação com api
-import React,{ Component } from 'react';
-import api from '../../utils/FakeStoreAPI';
 
+// // comunicação com api
+// import React,{ Component } from 'react';
+// import api from '../../utils/FakeStoreAPI';
 
+// // comunicação com api
+// class App extends Component {
+//   state= {
+//     products: [],
+//   }
 
-// comunicação com api
-class App extends Component {
-  state= {
-    products: [],
-  }
+//   async componentDidMount() {
+//     // valor do objeto ali nos parenteses logo após api.get
+//     const response = await api.get(''); 
 
-  async componentDidMount() {
-    // valor do objeto ali nos parenteses logo após api.get
-    const response = await api.get(''); 
+//     this.setState({ products: response.data});
+//   }
 
-    this.setState({ products: response.data});
-  }
+//   render() {
 
-  render() {
+//     const { products } = this.state;
 
-    const { products } = this.state;
-
-    return (
-       <div>
-          <h1>salve</h1>
-          {products.map(products => (
-            <li key={products.show.id}>
-              <h2>
-                <strong>titulo: </strong>
-                {products.show.name}
-              </h2>
-              <p>
-                {products.show.url}
-              </p>
-            </li>
-          )}
-       </div>
-    );
-  };
-};
+//     return (
+//        <div>
+//           <h1>salve</h1>
+//           {products.map(products => (
+//             <li key={products.show.id}>
+//               <h2>
+//                 <strong>titulo: </strong>
+//                 {products.show.name}
+//               </h2>
+//               <p>
+//                 {products.show.url}
+//               </p>
+//             </li>
+//           ))}
+//        </div>
+//     );
+//   };
+// };
 
 
 function Copyright(props) {
