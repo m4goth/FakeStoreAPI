@@ -14,13 +14,52 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
-
+// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import CardMedia from '@mui/material/CardMedia';
 
 import "../../components/Login/Login";
 import { Divider } from '@mui/material';
-// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// comunicação com api
+import React,{ Component } from 'react';
+import api from '../../utils/FakeStoreAPI';
 
+
+
+// comunicação com api
+class App extends Component {
+  state= {
+    products: [],
+  }
+
+  async componentDidMount() {
+    // valor do objeto ali nos parenteses logo após api.get
+    const response = await api.get(''); 
+
+    this.setState({ products: response.data});
+  }
+
+  render() {
+
+    const { products } = this.state;
+
+    return (
+       <div>
+          <h1>salve</h1>
+          {products.map(products => (
+            <li key={products.show.id}>
+              <h2>
+                <strong>titulo: </strong>
+                {products.show.name}
+              </h2>
+              <p>
+                {products.show.url}
+              </p>
+            </li>
+          )}
+       </div>
+    );
+  };
+};
 
 
 function Copyright(props) {
@@ -97,7 +136,7 @@ function PricingContent() {
 
       {/* conteudo da api */}
 
-      
+
 
       <Container maxWidth="md" component="main">
       </Container>
