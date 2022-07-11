@@ -15,12 +15,4 @@ export default api;
     //     })
     //     .catch(error => console.log(error))
     // }
-    ssjdsl ld ls ldk kdcls ksla ´dddpdklspadpwkwopkcv 
-    sosks
-     sa
-      s
-      sakposvc
-       lsaa
-
-        adfap´
         
