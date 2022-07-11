@@ -2,9 +2,9 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 // import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-// import Card from '@mui/material/Card';
+import Card from '@mui/material/Card';
 // import CardActions from '@mui/material/CardActions';
-// import CardContent from '@mui/material/CardContent';
+import CardContent from '@mui/material/CardContent';
 // import CardHeader from '@mui/material/CardHeader';
 import CssBaseline from '@mui/material/CssBaseline';
 // import Grid from '@mui/material/Grid';
@@ -15,64 +15,27 @@ import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
 // import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-// import CardMedia from '@mui/material/CardMedia';
+import CardMedia from '@mui/material/CardMedia';
+
+import { CardActionArea } from '@mui/material';
 
 import "../../components/Login/Login";
 import { Divider } from '@mui/material';
+import Products from '../Produtos/Produtos';
+import ProdutosList from '../ProdutosList/ProdutosList';
 
-// // comunicação com api
-// import React,{ Component } from 'react';
-// import api from '../../utils/FakeStoreAPI';
-
-// // comunicação com api
-// class App extends Component {
-//   state= {
-//     products: [],
-//   }
-
-//   async componentDidMount() {
-//     // valor do objeto ali nos parenteses logo após api.get
-//     const response = await api.get(''); 
-
-//     this.setState({ products: response.data});
-//   }
-
-//   render() {
-
-//     const { products } = this.state;
-
-//     return (
-//        <div>
-//           <h1>salve</h1>
-//           {products.map(products => (
-//             <li key={products.show.id}>
-//               <h2>
-//                 <strong>titulo: </strong>
-//                 {products.show.name}
-//               </h2>
-//               <p>
-//                 {products.show.url}
-//               </p>
-//             </li>
-//           ))}
-//        </div>
-//     );
-//   };
-// };
-
-
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://github.com/m4goth/FakeStoreAPI">
-        M4goth and Andersou
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+// function Copyright(props) {
+//   return (
+//     <Typography variant="body2" color="text.secondary" align="center" {...props}>
+//       {'Copyright © '}
+//       <Link color="inherit" href="https://github.com/m4goth/FakeStoreAPI">
+//         M4goth and Andersou
+//       </Link>{' '}
+//       {new Date().getFullYear()}
+//       {'.'}
+//     </Typography>
+//   );
+// }
 
 function PricingContent() {
   return (
@@ -135,13 +98,32 @@ function PricingContent() {
 
       {/* conteudo da api */}
 
+        <Card sx={{ maxWidth: 345 }}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="140"
+              src={Products.image}
+              alt=""
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {Products.title}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {`Price: ${Products.price}`}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      );
 
-
-      <Container maxWidth="md" component="main">
-      </Container>
+      {/* linhda da interface */}
+      {/* <Container maxWidth="md" component="main">
+      </Container> */}
 
       {/* container copyright */}
-      <Container
+      {/* <Container
         maxWidth="md"
         component="footer"
         sx={{
@@ -151,7 +133,7 @@ function PricingContent() {
         }}
       >
         <Copyright sx={{ mt: 5 }} />
-      </Container>
+      </Container> */}
     </React.Fragment>
   );
 }
