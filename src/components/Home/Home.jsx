@@ -1,28 +1,23 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
 // import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
+import Button from "@mui/material/Button";
 // import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
+
 // import CardHeader from '@mui/material/CardHeader';
-import CssBaseline from '@mui/material/CssBaseline';
+import CssBaseline from "@mui/material/CssBaseline";
 // import Grid from '@mui/material/Grid';
 // import StarIcon from '@mui/icons-material/StarBorder';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
-import GlobalStyles from '@mui/material/GlobalStyles';
-import Container from '@mui/material/Container';
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
+import GlobalStyles from "@mui/material/GlobalStyles";
+import Container from "@mui/material/Container";
 // import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import CardMedia from '@mui/material/CardMedia';
-
-import { CardActionArea } from '@mui/material';
 
 import "../../components/Login/Login";
-import { Divider } from '@mui/material';
-import Products from '../Produtos/Produtos';
-import ProdutosList from '../ProdutosList/ProdutosList';
+import { Divider } from "@mui/material";
+import ProdutosList from "../ProdutosList/ProdutosList";
 
 // function Copyright(props) {
 //   return (
@@ -40,7 +35,9 @@ import ProdutosList from '../ProdutosList/ProdutosList';
 function PricingContent() {
   return (
     <React.Fragment>
-      <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
+      <GlobalStyles
+        styles={{ ul: { margin: 0, padding: 0, listStyle: "none" } }}
+      />
       <CssBaseline />
       {/* cabeçalho */}
       <AppBar
@@ -49,7 +46,7 @@ function PricingContent() {
         elevation={0}
         sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
       >
-        <Toolbar sx={{ flexWrap: 'wrap' }}>
+        <Toolbar sx={{ flexWrap: "wrap" }}>
           <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
             Fake Store
           </Typography>
@@ -72,13 +69,22 @@ function PricingContent() {
             </Link>
           </nav>
           {/* botão login, fazer o router para o botão ser interagivel, component Login.jsx */}
-          <Button href="./Login/Login" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+          <Button
+            href="./Login/Login"
+            variant="outlined"
+            sx={{ my: 1, mx: 1.5 }}
+          >
             Entrar
           </Button>
         </Toolbar>
       </AppBar>
       {/* Conteúdo do site */}
-      <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
+      <Container
+        disableGutters
+        maxWidth="sm"
+        component="main"
+        sx={{ pt: 8, pb: 6 }}
+      >
         {/* titulo e biografia */}
         <Typography
           component="h1"
@@ -89,39 +95,21 @@ function PricingContent() {
         >
           Store
         </Typography>
-        <Typography variant="h5" align="center" color="text.secondary" component="p">
+        <Typography
+          variant="h5"
+          align="center"
+          color="text.secondary"
+          component="p"
+        >
           Blá blá blá
         </Typography>
       </Container>
-
       <Divider />
-
-      {/* conteudo da api */}
-
-        <Card sx={{ maxWidth: 345 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              src={Products.image}
-              alt=""
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {Products.title}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {`Price: ${Products.price}`}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
+      <ProdutosList />
       );
-
       {/* linhda da interface */}
       {/* <Container maxWidth="md" component="main">
       </Container> */}
-
       {/* container copyright */}
       {/* <Container
         maxWidth="md"

@@ -4,16 +4,15 @@ import React from 'react';
 // import Routes from "./routes";
 
 import Home from "./components/Home/Home"
-import Produtos from "./components/Produtos/Produtos"
+// import Produtos from "./components/Produtos/Produtos"
 // import Login from "./components/Login/Login"
 
 
 const App = () => {
-   return (
-    <>
-      <Home />
-      <Produtos />
-    </>
+  return (
+
+    <Home />
+
     // <Router>
     //   <div className="App" >
     //     <Routes>
@@ -24,7 +23,7 @@ const App = () => {
     //     </Routes>
     //   </div>
     // </Router>
-   );
+  );
 }
 // const App = () => {
 
